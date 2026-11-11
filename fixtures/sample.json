@@ -1,0 +1,8 @@
+{
+  "pages": [
+    {
+      "url": "https://lab.example/item/1",
+      "html": "<h1>深海观测成果</h1><article>第一期观测说明</article>"
+    }
+  ]
+}

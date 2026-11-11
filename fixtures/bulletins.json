@@ -1,0 +1,40 @@
+{
+  "allow_origins": [
+    "https://lab.example"
+  ],
+  "versions": [
+    {
+      "url": "https://lab.example/item/1",
+      "status": 200,
+      "etag": "\"r1\"",
+      "html": "<h1>成果甲</h1><article>测深100米</article>"
+    },
+    {
+      "url": "https://lab.example/item/1",
+      "status": 304,
+      "etag": "\"r1\""
+    },
+    {
+      "url": "https://mirror.example/a",
+      "status": 200,
+      "etag": "\"m1\"",
+      "canonical": "https://lab.example/item/1",
+      "html": "<h1>成果甲</h1><article>测深100米</article>"
+    },
+    {
+      "url": "https://lab.example/item/1",
+      "status": 200,
+      "etag": "\"r2\"",
+      "html": "<h1>成果甲</h1><article>更正为110米</article>"
+    },
+    {
+      "url": "https://lab.example/item/1",
+      "status": 503
+    },
+    {
+      "url": "https://lab.example/item/1",
+      "status": 410,
+      "reason": "发布方明确撤回"
+    }
+  ]
+}

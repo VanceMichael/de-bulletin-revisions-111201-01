@@ -47,7 +47,7 @@ def replay_server(routes):
                 reply = replies[min(index, len(replies) - 1)]
                 positions[self.path] = index + 1
             data = base64.b64decode(reply['base64']) if 'base64' in reply else reply.get('body', '').encode('utf-8')
-            self.send_response(reply.get('status', 200))
+            self.send_response_only(reply.get('status', 200))
             for name, value in reply.get('headers', {}).items():
                 self.send_header(name, value)
             self.send_header('Content-Length', str(len(data)))
